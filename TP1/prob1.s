@@ -17,18 +17,20 @@ vetor: .word 1 2 3 4 5 6 7 8 9 10
         addi a2, zero, 2
         jal ra, multiplos
         addi t0, zero, 5
-        bne a0,t0,teste2
+        bne r0,t0,teste2
         addi s0,s0,1
 teste2: la a0, vetor
         addi a1, zero, 10
         addi a2, zero, 3
         jal ra, multiplos
         addi t0, zero, 3
-        bne a0,t0, FIM
+        bne r0,t0, FIM
         addi s0,s0,1
         beq zero,zero,FIM
 
+
 ##### R2 START MODIFIQUE AQUI START #####
+
 multiplos:
     # Recebe três argumentos: a0, a1 e a2
     # a0: endereço do vetor
